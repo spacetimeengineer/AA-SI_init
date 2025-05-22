@@ -62,7 +62,9 @@ conda activate aa_lab
 Start the authentication process for Google Cloud:
 
 ```bash
-gcloud auth login
+gcloud auth application-default login
+gcloud config set account {ACCOUNT} 
+gcloud config set project ggn-nmfs-aa-dev-1 
 ```
 
 Follow the browser-based instructions to complete authentication.
