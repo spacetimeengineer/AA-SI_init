@@ -71,22 +71,6 @@ Follow the browser-based instructions to complete authentication.
 
 ---
 
-### 6. Run Tests
-
-After setup and authentication, run your test suite:
-
-```bash
-python -m unittest discover
-```
-
-Or, if you have a custom test runner:
-
-```bash
-pytest tests/
-```
-
----
-
 ### 7. Explore Available Commands
 
 Run the following to see available operations:
