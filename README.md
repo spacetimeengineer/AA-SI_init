@@ -6,6 +6,13 @@ This guide walks you through setting up your development environment after a bui
 
 ## 🚀 Step-by-Step Instructions
 
+
+### 0. Download Startup Script
+
+```bash
+wget https://raw.githubusercontent.com/spacetimeengineer/startup-script/main/post-build-setup.sh
+```
+
 ### 1. Set Execute Permission for the Script
 
 Ensure the `post-build-setup.sh` script is executable:
