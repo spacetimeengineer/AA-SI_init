@@ -37,14 +37,20 @@ else
     sudo apt install -y software-properties-common
     sudo add-apt-repository -y ppa:deadsnakes/ppa
     sudo apt update
-    sudo apt install -y python3.10 python3.10-venv python3.10-dev
+    sudo apt install -y python3.10 python3.10-dev
+fi
+
+# --- Check if python3.10-venv is installed ---
+if python3.10 -m venv --help &>/dev/null; then
+    echo "🧪 python3.10-venv is already available. Skipping venv package install."
+else
+    echo "🔧 Installing python3.10-venv..."
+    sudo apt install -y python3.10-venv
 fi
 
 # --- Set up Python virtual environment and install packages ---
 echo "🔧 Setting up AA-SI environment..."
 cd "$HOME"
-
-sudo apt install -y python3-venv
 
 ENV_NAME="aa_lab"
 echo "🧪 Creating virtual test tank: $ENV_NAME"
