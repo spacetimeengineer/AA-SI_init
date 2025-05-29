@@ -10,8 +10,13 @@ This guide walks you through setting up your development environment after a bui
 ### 1. Download and Run Initialization Script -> Activate AA-SI enviornment
 
 ```bash
-sudo wget https://raw.githubusercontent.com/spacetimeengineer/AA-SI_init/main/init.sh && sudo chmod +x init.sh && ./init.sh && cd ~ && source aa_lab/bin/activate
+sudo wget https://raw.githubusercontent.com/spacetimeengineer/AA-SI_init/main/init.sh && \
+sudo chmod +x init.sh && \
+./init.sh && \
+cd ~ && \
+source aa_lab/bin/activate
 ```
+
 
 ---
 
@@ -20,8 +25,8 @@ sudo wget https://raw.githubusercontent.com/spacetimeengineer/AA-SI_init/main/in
 Start the authentication process for Google Cloud:
 
 ```bash
-gcloud auth application-default login
-gcloud config set account {ACCOUNT} 
+gcloud auth application-default login && \
+gcloud config set account {ACCOUNT} && \ 
 gcloud config set project ggn-nmfs-aa-dev-1 
 ```
 
