@@ -10,15 +10,15 @@ This guide walks you through setting up your development environment after a bui
 ### 0. Download Startup Script
 
 ```bash
-wget https://raw.githubusercontent.com/spacetimeengineer/startup-script/main/post-build-setup.sh
+wget https://raw.githubusercontent.com/spacetimeengineer/AA-SI_init/main/init.sh
 ```
 
 ### 1. Set Execute Permission for the Script
 
-Ensure the `post-build-setup.sh` script is executable:
+Ensure the `init.sh` script is executable:
 
 ```bash
-sudo chmod +x post-build-setup.sh
+sudo chmod +x init.sh
 ```
 
 ### 2. Run the Script
@@ -26,7 +26,7 @@ sudo chmod +x post-build-setup.sh
 Run the script **without** `sudo`:
 
 ```bash
-./post-build-setup.sh
+./init.sh
 ```
 
 ---

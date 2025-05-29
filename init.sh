@@ -50,7 +50,7 @@ pip install --upgrade pip
 echo "🐬 Installing acoustics libraries into $ENV_NAME..."
 
 echo "🎣 Installing AA-SI_aalibrary (active signal interpretation)..."
-pip install --no-cache-dir -vv --force-reinstall git+https://github.com/spacetimeengineer/AA-SI_aalibrary.git@bcbc88a
+pip install --no-cache-dir -vv --force-reinstall git+https://github.com/nmfs-ost/AA-SI_aalibrary
 
 echo "🐡 Installing echoml (echo classification & ML)..."
 pip install --no-cache-dir -vv --force-reinstall git+https://github.com/spacetimeengineer/echoml.git@d4c8bbd
