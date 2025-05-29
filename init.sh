@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e  # Exit immediately if any command fails
 
-echo "🔊🐟 Initializing post-build-setup..."
+echo "🔊🐟 Initializing..."
 sleep 0.1
 
 # --- Ensure the home directory exists ---
@@ -28,16 +28,23 @@ else
     sleep 0.4
 fi
 
+# --- Check for Python 3.10 ---
+if command -v python3.10 &>/dev/null; then
+    echo "🐍 Python 3.10 is already installed. Skipping Python setup."
+else
+    echo "🔧 Python 3.10 not found. Installing..."
+    sudo apt update
+    sudo apt install -y software-properties-common
+    sudo add-apt-repository -y ppa:deadsnakes/ppa
+    sudo apt update
+    sudo apt install -y python3.10 python3.10-venv python3.10-dev
+fi
+
 # --- Set up Python virtual environment and install packages ---
 echo "🔧 Setting up AA-SI environment..."
 cd "$HOME"
 
-sudo apt update
-sudo apt install -y software-properties-common
-sudo add-apt-repository -y ppa:deadsnakes/ppa
 sudo apt install -y python3-venv
-sudo apt install -y python3.10 python3.10-venv python3.10-dev
-sudo apt update
 
 ENV_NAME="aa_lab"
 echo "🧪 Creating virtual test tank: $ENV_NAME"
@@ -58,11 +65,11 @@ pip install --no-cache-dir -vv --force-reinstall git+https://github.com/spacetim
 echo "🦈 Installing echosms (system management for sonar ops)..."
 pip install echosms
 
-echo "✅ Python enviornment $ENV_NAME is fully configured for aquatic signal processing."
+echo "✅ Python environment $ENV_NAME is fully configured for aquatic signal processing."
 sleep 0.4
 
 # --- Final instructions ---
-echo "📡 AA-SI enviornment is live and ready for use."
+echo "📡 AA-SI environment is live and ready for use."
 sleep 0.1
 echo "🔁 Navigate to home directory with: cd"
 sleep 0.1
