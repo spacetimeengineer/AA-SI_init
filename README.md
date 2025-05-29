@@ -1,63 +1,21 @@
 # Post-Build Setup Instructions
 
-This guide walks you through setting up your development environment after a build. It includes setting permissions, executing the `post-build-setup.sh` script, activating the Python virtual environment, authenticating with Google Cloud, and running validation tests.
+This guide walks you through setting up your development environment after a build. It includes setting permissions, executing the `init.sh` script, activating the Python virtual environment, authenticating with Google Cloud, and running validation tests.
 
 ---
 
 ## 🚀 Step-by-Step Instructions
 
 
-### 0. Download Startup Script
+### 1. Download and Run Initialization Script -> Activate AA-SI enviornment
 
 ```bash
-wget https://raw.githubusercontent.com/spacetimeengineer/AA-SI_init/main/init.sh
-```
-
-### 1. Set Execute Permission for the Script
-
-Ensure the `init.sh` script is executable:
-
-```bash
-sudo chmod +x init.sh
-```
-
-### 2. Run the Script
-
-Run the script **without** `sudo`:
-
-```bash
-./init.sh
+sudo wget https://raw.githubusercontent.com/spacetimeengineer/AA-SI_init/main/init.sh && sudo chmod +x init.sh && ./init.sh && cd ~ && source aa_lab/bin/activate
 ```
 
 ---
 
-### 3. Navigate to Your Home Directory
-
-If not already there, switch to your home folder:
-
-```bash
-cd ~
-```
-
----
-
-### 4. Activate the Python Virtual Environment
-
-Activate the `aa_lab` virtual environment:
-
-```bash
-source aa_lab/bin/activate
-```
-
-If you're using `conda`, the equivalent might be:
-
-```bash
-conda activate aa_lab
-```
-
----
-
-### 5. Authenticate with Google Cloud
+### 2. Authenticate with Google Cloud
 
 Start the authentication process for Google Cloud:
 
@@ -71,7 +29,7 @@ Follow the browser-based instructions to complete authentication.
 
 ---
 
-### 7. Explore Available Commands
+### 3. Explore Available Commands
 
 Run the following to see available operations:
 
